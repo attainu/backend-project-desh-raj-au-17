@@ -8,7 +8,8 @@
     "start": "node bavk-end/index.js",
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon back-end/index",
     "prod": "SET NODE_ENV=PRODUCTION& nodemon back-end/index",
-    "seeder": "node back-end/utils/seeder.js"
+    "seeder": "node back-end/utils/seeder.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix front-end && npm run build --prefix front-end"
   },
   "keywords": [],
   "author": "Desh Raj and Vaishnavi Gupta",

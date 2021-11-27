@@ -1,6 +1,8 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: "back-end/config/config.env" });
+
 const app = require("./app");
 const connectDatabase = require("./config/database");
-const dotenv = require("dotenv");
 
 // handling uncaught exceptions.and we have to put this on top otherwise this will not work
 
@@ -11,6 +13,8 @@ process.on("uncaughtException", (err) => {
 });
 
 //setting up config files
+// if (process.env.NODE_ENV !== "PRODUCTION")
+//   require("dotenv")
 dotenv.config({ path: "back-end/config/config.env" });
 
 // connecting to data base.keys
